@@ -42,14 +42,14 @@ body {
 
 /* class to remove animation when finished */
 .loader.done {
-	/* === NOTE!!! I increased the duration to '5s' here so you would see the effect of the preloader === */
-	animation: fadeOut 5s;
+	/* === NOTE!!! I increased the duration to '15s' here so you would see the effect of the preloader === */
+	animation: fadeOut 15s;
 	animation-fill-mode: forwards;
 }
 
 /* Preloader Animations */
 .animated {
-	width: 100px;
+	width: 50px;
 	height: 5px;
 	position: absolute;
 	background-color: #ccc;
@@ -81,10 +81,10 @@ body {
 /* Logo animation */
 .logo_container img {
 	animation-name: fadeOut;
-	animation-duration: 1s;
+	animation-duration: 1.6s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
-	animation-timing-function: cubic-bezier(.2,.64,.81,.23);
+	animation-timing-function: linear;
 }
 @keyframes fadeOut {
     0%{

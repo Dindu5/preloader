@@ -1,0 +1,110 @@
+/* Normal Body and page Styles */
+* {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: cursive;
+}
+body {
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(34, 36, 54);
+}
+
+.other-elements {
+	width: 80%;
+}
+.other-elements img,
+.loader img {
+	width: 100%;
+	height: auto;
+}
+
+
+/* ================================================= */
+/* ======= preloader div : Covers Everything ======= */
+/* ================================================= */
+.loader {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 99;
+	background-color: black;
+	overflow-x : hidden;
+}
+
+/* class to remove animation when finished */
+.loader.done {
+	/* === NOTE!!! I increased the duration to '5s' here so you would see the effect of the preloader === */
+	animation: fadeOut 5s;
+	animation-fill-mode: forwards;
+}
+
+/* Preloader Animations */
+.animated {
+	width: 100px;
+	height: 5px;
+	position: absolute;
+	background-color: #ccc;
+	top: 70%;
+	border-radius: 30px;
+}
+.animated.one {
+	background-color: #FF5460;
+	animation: move 2s infinite cubic-bezier(.2,.64,.81,.23);
+}
+.animated.two {
+	background-color: #22e111;
+	animation: move 2s 150ms infinite cubic-bezier(.2,.64,.81,.23);
+}
+.animated.three {
+	background-color: #F51d1d;
+	animation: move 2s 300ms infinite cubic-bezier(.2,.64,.81,.23);
+}
+.animated.four {
+	background-color: #ffa012;
+	animation: move 2s 450ms infinite cubic-bezier(.2,.64,.81,.23);
+}
+@keyframes move {
+	0% {left: 0%;}
+	100% {left:100%;}
+}
+
+
+/* Logo animation */
+.logo_container img {
+	animation-name: fadeOut;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: cubic-bezier(.2,.64,.81,.23);
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 0.5;
+		filter: blur(5px);
+	}
+	80% {
+		opacity: 1;
+		filter: blur(0);
+	}
+	100% {
+		opacity: 0.8;
+		filter: blur(5px);
+	}
+}
+
+/* This is just to fade out the loader */
+@keyframes fadeOut {
+	100% {
+		opacity: 0;
+		visibility: hidden;
+	}
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre - loader</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <!-- This is the preloader itself -->
+    <div class="loader">
+        <!-- Anythhing Can be added here -->
+        <div class="logo_container">
+            <img src="./assets/imgs/logo1 1 (1).png" alt="">
+        </div>
+        <!-- Sliders -->
+
+        <div class="animated one"></div>
+        <div class="animated two"></div>
+        <div class="animated three"></div>
+        <div class="animated four"></div>
+    </div>
+
+    <div class="other-elements">
+        <img src="./assets/imgs/EXAMSTERN LANDING.png" alt="">
+    </div>
+
+</body>
+<script>
+    // This is the function that removes the preloader when
+    // Every element of your page is loaded i.e images and other things
+
+    window.addEventListener('load', function () {
+        const loader = document.querySelector('.loader');
+        loader.classList.add('don');
+    });
+
+    // for best results, if you have other animations on your page like gsap and others
+    // Enclose them is a 'window.addEventListener('load', function(){
+    //                           // Your other animations will be inside this function go here   
+    //                       })'
+    // This will ensure your animations start only when the page is fully loaded and your preloader is removed
+    // Enjoy!!
+</script>
+
+</html>

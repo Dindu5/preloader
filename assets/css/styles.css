@@ -42,8 +42,8 @@ body {
 
 /* class to remove animation when finished */
 .loader.done {
-	/* === NOTE!!! I increased the duration to '5s' here so you would see the effect of the preloader === */
-	animation: fadeOut 5s;
+	/* === NOTE!!! I increased the duration to '15s' here so you would see the effect of the preloader === */
+	animation: fadeOut 15s;
 	animation-fill-mode: forwards;
 }
 
